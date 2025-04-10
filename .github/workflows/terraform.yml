@@ -63,6 +63,12 @@ jobs:
       run:
         shell: bash
 
+    env:
+      TENANT_ID: ${{ secrets.TENANT_ID }}
+      SUBSCRIPTION_ID: ${{ secrets.SUBSCRIPTION_ID }}
+      CLIENT_ID: ${{ secrets.CLIENT_ID }}
+      CLIENT_SECRET: ${{ secrets.CLIENT_SECRET}}
+    
     steps:
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
