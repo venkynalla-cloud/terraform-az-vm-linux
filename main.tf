@@ -36,7 +36,7 @@ resource "azurerm_linux_virtual_machine" "vm-ubuntu002" {
   admin_username = "azureuser"
   admin_ssh_key {
     username   = "azureuser"
-    public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCzmNAuy2gppwJ3sZBWtguRi/e9uTWJwaERK6ScZBGI0ZA8ZbMMj+vLrEyAKs5OXA3Zq536x5jzYP5lqzg3hg4KEWF/pn2Evim9VDUmCim+wRp+SybVxkuQfLHPPC+zQRvreYvqFvlL8sWtpTcqEfCr7DdKazxml0SrzSYM7jG7U76JuinijutrlWO3j0CVzkGK0NdcRcI36yripMvj348lLWy5AUciDmj87Pz7GK4edAZfQZQ7FZpcXr8EzUABnZCq3sn471HbgW4mZauEgZFD2z0vEnIvdrqUoO2KrXtCso3Up6Ik32Hx2iITUvXTZVkezuGJ/n1yl/00AdKgtfiPtl/A//nPK1Vpl1APzH1fKHZXZU79vafnu/JchkVpu83S9Q22DVZF9jaEQ6RcK+8liXowXTRuTuWA4S89PXi6x3/QY8dm8vuCy0UiRG4op9Fn69bcouQ9G0GXi/wP6mvRGhlxKAZH/UE7BhwjaA9FLKW9MATjpczusRKRckptQhk= generated-by-azure"
+    public_key = var.public_key
   }
   name                = "vm-ubuntu002"
   size                = "Standard_B1s"
