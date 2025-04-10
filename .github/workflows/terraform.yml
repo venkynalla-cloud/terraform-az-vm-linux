@@ -85,7 +85,8 @@ jobs:
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan
-      run: terraform plan -input=false  \
+      run: |
+        terraform plan -input=false  \
               -var="client_id=${{ secrets.CLIENT_ID }}" \
               -var="client_secret=${{ secrets.CLIENT_SECRET }}" \
               -var="tenant_id=${{ secrets.TENANT_ID }}" \
